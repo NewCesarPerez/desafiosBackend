@@ -13,5 +13,13 @@
   },
   "dependencies": {
     "express": "^4.18.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NewCesarPerez/desafiosBackend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NewCesarPerez/desafiosBackend/issues"
+  },
+  "homepage": "https://github.com/NewCesarPerez/desafiosBackend#readme"
 }
