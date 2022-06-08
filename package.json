@@ -4,7 +4,7 @@
   "description": "",
   "main": "desafioTres.js",
   "scripts": {
-    "start": "nodemon ./desafios/desafioTres.js"
+    "start": "node ./desafios/desafioTres.js"
   },
   "author": "",
   "license": "ISC",
