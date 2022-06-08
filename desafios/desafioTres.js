@@ -1,4 +1,4 @@
-//let id=0;
+let id=0;
 
 const fs=require('fs')
 const archivo='productos.txt'
@@ -7,11 +7,10 @@ const app=express()
 const puerto=8080
 
 class Contenedor{
-    static id=0
     constructor(fileName){
         this.fileName=fileName;
         this.productToPush=''
-        //this.id=0;
+        this.id=0;
         this.arrayProductos=[]
         
     }
@@ -26,9 +25,9 @@ class Contenedor{
     
     async save(product){
         
-            Contenedor.id++
+            id++
             this.productToPush=product
-            this.productToPush.id=Contenedor.id
+            this.productToPush.id=id
         try{
             this.arrayProductos.push(this.productToPush)
             await this.createFile(JSON.stringify(this.arrayProductos,null,2))
