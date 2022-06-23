@@ -1,0 +1,23 @@
+extends main.pug 
+block tabla
+    table(class="table m-auto mt-5 w-75")
+        thead    
+            tr
+                th(scope="col") Nombre
+                th(scope="col") Precio 
+                th(scope="col") Url
+            tr
+        thead
+        tbody
+            tr(class="w-75")
+                td(class="w-25" style="color:gold")${this.nombre}
+                td(class="w-25" style="color:gold"){{this.precio}}
+                td(class="w-25" style="color:gold")
+                    img(class="w-25 px-2 mx-auto d-flex justify-content-center" src={{this.url}} alt="Ruta a imagen")
+            tr
+    div(class="border d-grid gap-2 col 6 mx-auto text-center mt-5")
+        p(class="text-warning") No hay productos
+
+
+
+

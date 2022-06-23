@@ -1,0 +1,8 @@
+Montor de plantillas preferido: EJS
+
+Razón: 
+
+	- Mas allá de su instalación a través de NPM, no requiere mayor configuración. 
+	- Permite la utilización de sintaxis html.
+	- Incrusta lenguaje JS dentro de HTML muy facilmente. 
+	- Permite la incorporación de parciales de manera sencilla.

@@ -1,0 +1,32 @@
+extends main.pug
+block formulario
+        h1(class="mx-2 mb-5 d-flex justify-content-center text-success") Ingresa un producto
+        form(action="/productos" method="POST" class="mx-2 mb-5 d-flex justify-content-center text-success" ) 
+                label(for="nombre") Nombre
+                input(class="mx-3" type="text" name="nombre")
+                label(for="precio") Precio 
+                input(class="mx-3" type="number" name="precio")
+                label(for="url") Url 
+                input(class="mx-3" type="text" name="url")
+                input(type="submit" value="Subir")
+block tabla
+    if productos.length 
+        table(class="table m-auto mt-5 w-75")
+            thead    
+                tr
+                    th(scope="col") Nombre
+                    th(scope="col") Precio 
+                    th(scope="col") Url
+                tr
+            tbody
+                each producto in productos
+                    tr(class="w-75")
+                        
+                            td(class="w-25" style="color:gold") #{producto.nombre}
+                            td(class="w-25" style="color:gold") #{producto.precio}
+                            td(class="w-25" style="color:gold") 
+                                img(class="w-25 px-2 mx-auto d-flex justify-content-center" src=producto.url alt="Ruta a imagen")
+                    tr
+    else
+        div(class="border d-grid gap-2 col 6 mx-auto text-center mt-5")
+                p(class="text-warning") No hay productos
