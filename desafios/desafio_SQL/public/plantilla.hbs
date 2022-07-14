@@ -1,0 +1,35 @@
+<h1 class="mx-2 mb-5 d-flex justify-content-center text-success">Ingresa un producto</h1>
+<form class="mt-5 d-flex justify-content-center" action="/" method="POST">
+            <label for="title">Titulo</label>
+            <input class="mx-3" type="text" name="nombre">
+            <label for="price">Precio</label>
+            <input class="mx-3" type="number" name="precio">
+            <label for="url">Url</label>
+            <input class="mx-3" type="text" name="url">
+            <input type="submit" value="Subir">
+    </form>
+{{#if hasAny}}
+<table class="table m-auto mt-5 w-75">
+    <thead >    
+    <tr >
+    <th scope="col">Nombre</th>
+    <th scope="col">Precio</th>
+    <th scope="col">Url</th>
+    </tr>
+    </thead>
+  <tbody>  
+{{#each products}}
+
+<tr class="w-75">
+    <td id="productTitle" class="w-25" style="color:gold">{{this.nombre}}</td>
+    <td id="productPrice" class="w-25" style="color:gold">{{this.precio}}</td>
+    <td  id="productThumbnail" class="w-25" style="color:gold"><img class="w-25 px-2 mx-auto d-flex justify-content-center" src={{this.url}} alt="Ruta a imagen"></td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+{{else}}
+    <div class="border d-grid gap-2 col 6 mx-auto text-center mt-5">
+        <p class="text-warning"> No hay productos</p>
+    </div>
+{{/if}}
