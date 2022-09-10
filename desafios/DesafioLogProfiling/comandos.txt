@@ -1,0 +1,3 @@
+Comandos PM2:
+
+pm2 start server2.js --watch -- -p 3000  && pm2 start server1-1.js --watch -- -p 3001 -m fork && pm2 start server1-2.js --watch -- -p 3002 -m fork && pm2 start server1-3.js --watch -- -p 3003 -m fork && pm2 start server1-4.js --watch -- -p 3004 -m fork
